@@ -1,0 +1,60 @@
+.order {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 50px;
+    border: 1px solid $orderBorderColor;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: $orderBGColor;
+    transition: $transitionDuration;
+
+    &:hover {
+        background-color: $orderHoverColor;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.order__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 95%;
+}
+
+.order__number {
+    width: 5%;
+}
+
+.order__date {
+    width: 15%;
+}
+
+.order__company {
+    width: 25%;
+}
+
+.order__name {
+    width: 25%;
+}
+
+.order__phone {
+    width: 20%;
+}
+
+.order__code {
+    width: 7%;
+}
+
+.order__ATI-link {
+    transition: $transitionDuration;
+    &:hover {
+        color: $orderLinkHoverColor;
+    }
+}

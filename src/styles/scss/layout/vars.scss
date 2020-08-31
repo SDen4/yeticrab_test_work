@@ -1,9 +1,11 @@
 //colors
-$main-color: red;
-$default-color: blue;
+$orderBGColor: #FFFAFA;
+$orderHoverColor: lightgray;
+$orderBorderColor: red;
+$orderLinkHoverColor: blue;
 
-//fonts
-$main-font: 'Gagalin', sans-serif;
+$transitionDuration: .3s;
+
 
 //resolutions
 $desktop: 1280px;
