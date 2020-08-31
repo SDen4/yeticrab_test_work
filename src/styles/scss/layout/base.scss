@@ -9,8 +9,9 @@ html {
 
 body {
   font: {
-    family: 'Open Sans', Helvetica, sans-serif;
-    size: 16px;
+    family: $baseFontFamily;
+    size: $baseFontSize;
+    color: $baseFontColor;
   }
   display: flex;
   justify-content: center;

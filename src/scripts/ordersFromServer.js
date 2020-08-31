@@ -5,7 +5,7 @@ export default [
         orderDate: "31.08.2020",
         orderTime: "08:15",
         carierCompany: "Logistic Company One",
-        carierName: "John Smith",
+        carierName: "John Smooth",
         phone: "+7 922 22 22 233",
         commets: "asap",
         code: 12345
@@ -15,7 +15,7 @@ export default [
         orderDate: "01.09.2020",
         orderTime: "09:00",
         carierCompany: "Logistic Company Two",
-        carierName: "John Smith",
+        carierName: "John Silver",
         phone: "+7 922 22 22 233",
         commets: "asap",
         code: 12346

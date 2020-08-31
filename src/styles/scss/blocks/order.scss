@@ -12,7 +12,8 @@
     transition: $transitionDuration;
 
     &:hover {
-        background-color: $orderHoverColor;
+        background-color: $orderBGHoverColor;
+        color: $orderTextHoverColor;
     }
 
     &:last-child {

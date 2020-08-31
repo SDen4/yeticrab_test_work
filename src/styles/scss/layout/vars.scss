@@ -1,15 +1,21 @@
-//colors
-$orderBGColor: #FFFAFA;
-$orderHoverColor: lightgray;
-$orderBorderColor: red;
-$orderLinkHoverColor: blue;
+//colors & bg
+    $orderBGColor: #FFF8DC;
+    $orderBGHoverColor: #FFEBCD;
+    $orderTextHoverColor: #8B4513;
+    $orderBorderColor: #D2691E;
+    $orderLinkHoverColor: red;
 
-$transitionDuration: .3s;
+//animations
+    $transitionDuration: .3s;
 
+//fonts
+    $baseFontFamily: 'Open Sans', Helvetica, sans-serif;
+    $baseFontSize: 16px;
+    $baseFontColor: #222;
 
 //resolutions
-$desktop: 1280px;
-$laptop: 980px;
-$tablet: 768px;
-$smartphone: 480px;
-$phone: 320px;
+    $desktop: 1280px;
+    $laptop: 980px;
+    $tablet: 768px;
+    $smartphone: 480px;
+    $phone: 320px;
