@@ -1,0 +1,22 @@
+.button {
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.button__submit {
+    background-color: $buttonAddOrder;
+    color: $buttonAddOrderNextColor;
+    transition: $transitionDuration;
+    &:hover {
+        background-color: $buttonAddOrderHover;
+    }
+}
+
+.button__reset {
+    background-color: $buttonDeleteOrder;
+    color: $buttonAddOrderNextColor;
+    transition: $transitionDuration;
+    &:hover {
+        background-color: $buttonDeleteOrderHover;
+    }
+}

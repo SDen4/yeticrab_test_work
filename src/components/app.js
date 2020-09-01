@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import OrdersList from "./ordersList";
 import Panel from "./panel";
+import NewOrder from "./newOrder";
 
 class App extends Component {
     render() {
@@ -10,6 +11,7 @@ class App extends Component {
                 <div className="app__main">
                     <OrdersList />
                     <Panel />
+                    <NewOrder />
                 </div>
             </div>
         );

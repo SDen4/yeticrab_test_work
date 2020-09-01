@@ -15,14 +15,3 @@
     width: 95%;
     height: 95%;
 }
-
-.panel__add-order {
-    padding: 5px 10px;
-    border-radius: 3px;
-    background-color: $buttonAddOrder;
-    color: $buttonAddOrderNextColor;
-    transition: $transitionDuration;
-    &:hover {
-        background-color: $buttonAddOrderHover;
-    }
-}

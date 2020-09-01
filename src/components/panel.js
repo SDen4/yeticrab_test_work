@@ -5,7 +5,7 @@ class Panel extends Component {
         return (
             <div className="panel">
                 <div className="panel__wrapper">
-                    <button className="panel__add-order">Add new order</button>
+                    <button className="button button__submit">Add new order</button>
                 </div>
             </div>
         )

@@ -2,9 +2,11 @@
 @import "./layout/vars.scss";
 @import "./layout/mixins.scss";
 @import "./layout/base.scss";
+@import "./layout/buttons.scss";
 
 
 @import "./blocks/app.scss";
 @import "./blocks/order.scss";
 @import "./blocks/ordersList.scss";
 @import "./blocks/panel.scss";
+@import "./blocks/newOrder.scss";
