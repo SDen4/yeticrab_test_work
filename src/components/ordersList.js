@@ -39,7 +39,6 @@ class OrdersList extends Component {
         this.setState({
             ordersListState: content
         });
-        console.log(this.state.ordersListState);
     }
 }
 

@@ -1,0 +1,28 @@
+.panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18%;
+    height: 100%;
+    border: 1px solid $orderBorderColor;
+    border-radius: 5px;
+}
+
+.panel__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 95%;
+    height: 95%;
+}
+
+.panel__add-order {
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: $buttonAddOrder;
+    color: $buttonAddOrderNextColor;
+    transition: $transitionDuration;
+    &:hover {
+        background-color: $buttonAddOrderHover;
+    }
+}
