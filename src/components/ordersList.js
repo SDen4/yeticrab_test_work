@@ -22,7 +22,7 @@ class OrdersList extends Component {
                         <div className="order__company">Company</div>
                         <div className="order__name">Name</div>
                         <div className="order__phone">Phone</div>
-                        <div className="order__code">ATI Code</div>
+                        <div className="order__code ordersList__code">ATI Code</div>
                     </div>
                 </div>
                 <ul className="ordersList__list">

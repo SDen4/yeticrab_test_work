@@ -12,6 +12,7 @@ class Order extends Component {
                     <div className="order__name">{item.carierName}</div>
                     <div className="order__phone">{item.phone}</div>
                     <a className="order__code order__ATI-link" href={`https://ati.su/firms/${item.code}/info`} target="_blanck">{item.code}</a>
+                    <button className="order__delete"></button>
                 </div>
             </li>
         )

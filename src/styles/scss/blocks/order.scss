@@ -59,3 +59,34 @@
         color: $orderLinkHoverColor;
     }
 }
+
+.order__delete {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+    &:hover {
+        &:before, &:after {
+        background-color: $buttonDeleteOrderHover;
+        }
+    }
+    &:before, &:after {
+        content: "";
+        display: block;
+        width: inherit;
+        height: 5px;
+        border-radius: 2px;
+        background-color: $buttonDeleteOrder;
+        transition: $transitionDuration;
+        position: absolute;
+        top: 13px;
+        left: 0px;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
