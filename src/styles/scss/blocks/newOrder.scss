@@ -1,6 +1,5 @@
 .newOrder {
-    // display: none;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -13,6 +12,10 @@
     background-color: $orderBGColor;
     border-radius: 5px;
     border: 1px solid $orderBorderColor;
+}
+
+.newOrder_active {
+    display: flex;
 }
 
 .newOrder__wrapper {

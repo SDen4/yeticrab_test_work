@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
 
 class NewOrder extends Component {
+    // constructor(props){
+    //     super(props);
+    //     this.handleReset = this.handleReset.bind(this);
+    // }
     render() {
+        const {handleClickNewOrder} = this.props;
         return (
-            <div className="newOrder">
+            <div className={`${handleClickNewOrder && "newOrder_active"} ${"newOrder"}`}>
                 <div className="newOrder__wrapper">
                     <h2 className="newOrder__title">Create new order</h2>
                     <form className="newOrder__form" encType="multipart/form-data">
@@ -43,13 +48,23 @@ class NewOrder extends Component {
                             ></textarea>
                         </label>
                         <div className="newOrder__buttons">
-                            <button type="submit" className="button button__submit">Save</button>
-                            <button type="reset" className="button button__reset">Reset</button>
+                            <button 
+                                type="submit" 
+                                className="button button__submit"
+                            >Save</button>
+                            <button 
+                                type="reset" 
+                                className="button button__reset"
+                                onClick={() => {this.handleReset()}}
+                            >Reset</button>
                         </div>
                     </form>
                </div>
             </div>
         )
+    }
+    handleReset() {
+        this.props.handleClear(false)
     }
 }
 

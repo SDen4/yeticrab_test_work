@@ -9,7 +9,7 @@ class OrdersList extends Component {
         ordersListState: []
     }
     componentDidMount() {
-        this.getordersList();
+        this.getOrdersList();
     }
     render() {
         const ordersList = this.state.ordersListState;
@@ -33,7 +33,7 @@ class OrdersList extends Component {
             </div>
         )
     }
-    getordersList = async () => {
+    getOrdersList = async () => {
         let response = await fetch(`http://localhost:3000/orders`);
         let content = await response.json();
         this.setState({

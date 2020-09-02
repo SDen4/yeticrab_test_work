@@ -1,7 +1,7 @@
 .ordersList {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
 }
 
 .ordersList__head {
@@ -10,7 +10,7 @@
     justify-content: center;
     width: 100%;
     height: 50px;
-    background-color: gray;
+    background-color: $orderListHeadBGColor;
     margin-bottom: 10px;
     font-weight: bold;
     border-radius: 5px;

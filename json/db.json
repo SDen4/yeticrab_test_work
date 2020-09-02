@@ -7,7 +7,7 @@
             "orderTime": "08:15",
             "carierCompany": "Logistic Company One",
             "carierName": "John Smooth",
-            "phone": "+7 922 22 22 233",
+            "phone": "+7 922 22 22 231",
             "commets": "asap",
             "code": 12345
         },{
@@ -17,7 +17,7 @@
             "orderTime": "09:00",
             "carierCompany": "Logistic Company Two",
             "carierName": "John Silver",
-            "phone": "+7 922 22 22 233",
+            "phone": "+7 922 22 22 232",
             "commets": "asap",
             "code": 12346
         },{
@@ -37,7 +37,7 @@
             "orderTime": "10:00",
             "carierCompany": "Logistic Company Four",
             "carierName": "John Stone",
-            "phone": "+7 922 22 22 233",
+            "phone": "+7 922 22 22 234",
             "commets": "asap",
             "code": 12348
         },{
@@ -47,7 +47,7 @@
             "orderTime": "11:00",
             "carierCompany": "Logistic Company Five",
             "carierName": "John Scale",
-            "phone": "+7 922 22 22 233",
+            "phone": "+7 922 22 22 235",
             "commets": "asap",
             "code": 12349
         },{
@@ -57,7 +57,7 @@
             "orderTime": "12:05",
             "carierCompany": "Logistic Company Six",
             "carierName": "John Superb",
-            "phone": "+7 922 22 22 233",
+            "phone": "+7 922 22 22 236",
             "commets": "asap",
             "code": 12350
         }
