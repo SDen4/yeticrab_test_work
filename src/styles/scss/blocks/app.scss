@@ -1,9 +1,10 @@
 .app {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     width: 95%;
+    margin-top: 20px;
 }
 
 .app__left {
