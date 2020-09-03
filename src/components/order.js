@@ -28,10 +28,9 @@ class Order extends Component {
                 </div>
                 <div className={`${this.state.delete ? "order__delete_confirm" : "order__delete_confirm_unactive"}`}>
                     <div className="order__delete_confirm_window">
-                        <div className="order__delete_confirm_text">Are you sure to delete the order number {item.orderNumber} ?</div>
+                        <div className="order__delete_confirm_text">Are you sure to delete the order #{item.orderNumber} ?</div>
                         <button 
                             className="button button__reset"
-                            // onClick={(e) => this.deleteOrder(item.id)}
                             onClick={this.deleteOrder}
                         >Delete</button>
                         <button 
@@ -61,7 +60,7 @@ class Order extends Component {
             delete: false,
             deleteId: null
         });
-        // this.props.handleRefresh();
+        this.props.handleRefresh();
     }
 }
 
