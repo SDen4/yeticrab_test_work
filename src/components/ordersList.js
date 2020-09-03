@@ -24,7 +24,11 @@ class OrdersList extends Component {
                 </div>
                 <ul className="ordersList__list">
                     {ordersList.map(item => (
-                        <Order key={item.id} item={item}/>
+                        <Order
+                            key={item.id}
+                            item={item}
+                            handleRefresh={this.getOrdersList}
+                        />
                     ))}
                 </ul>
             </div>

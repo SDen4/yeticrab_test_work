@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 class Order extends Component {
+    state = {
+        delete: false,
+        deleteId: null
+    }
     render() {
         const {item} = this.props;
         return (
@@ -19,15 +23,45 @@ class Order extends Component {
                     >{item.code}</a>
                     <button 
                         className="order__delete"
-                        onClick={(e) => this.deleteOrder(item.id)}
+                        onClick={(e) => this.deleteOrderWindow(item.id)}
                     ></button>
+                </div>
+                <div className={`${this.state.delete ? "order__delete_confirm" : "order__delete_confirm_unactive"}`}>
+                    <div className="order__delete_confirm_window">
+                        <div className="order__delete_confirm_text">Are you sure to delete the order number {item.orderNumber} ?</div>
+                        <button 
+                            className="button button__reset"
+                            // onClick={(e) => this.deleteOrder(item.id)}
+                            onClick={this.deleteOrder}
+                        >Delete</button>
+                        <button 
+                            className="order__delete order__delete_confirm_cancel"
+                            onClick={this.deleteOrderCancel}
+                        ></button>
+                    </div>
                 </div>
             </li>
         )
     }
-    deleteOrder(id) {
-        console.log(id); 
-        axios.delete(`http://localhost:3000/orders/` + id);
+    deleteOrderCancel = () => {
+        this.setState({
+            delete: false,
+            deleteId: null
+        })
+    }
+    deleteOrderWindow(id) {
+        this.setState({
+            delete: true,
+            deleteId: id
+        })
+    }
+    deleteOrder = () => {
+        axios.delete(`http://localhost:3000/orders/` + this.state.deleteId);
+        this.setState({
+            delete: false,
+            deleteId: null
+        });
+        // this.props.handleRefresh();
     }
 }
 

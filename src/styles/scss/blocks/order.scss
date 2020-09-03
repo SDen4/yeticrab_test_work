@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
     width: 100%;
     height: 50px;
     border-radius: 5px;
@@ -84,4 +85,46 @@
     &:after {
         transform: rotate(-45deg);
     }
+}
+
+.order__delete_confirm_unactive {
+    display: none;
+}
+
+.order__delete_confirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.order__delete_confirm_window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    padding: 40px 60px;
+    border: 2px solid $orderBorderColor;
+    border-radius: 5px;
+    background-color: $orderBGColor;
+}
+
+.order__delete_confirm_text {
+    margin-bottom: 20px;
+}
+
+.order__delete_confirm_cancel {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    
 }

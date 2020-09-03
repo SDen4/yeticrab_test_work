@@ -67,28 +67,6 @@
       "id": 1006
     },
     {
-      "orderNumber": 7,
-      "orderDate": "03.09.2020",
-      "orderTime": "21:20",
-      "carierCompany": "test",
-      "carierName": "trrtrt",
-      "phone": "0349285",
-      "comments": "odjflkjasdpfkoasd",
-      "code": "098",
-      "id": 1007
-    },
-    {
-      "orderNumber": 8,
-      "orderDate": "03.09.2020",
-      "orderTime": "21:21",
-      "carierCompany": "wpqoieu",
-      "carierName": "sdofij",
-      "phone": "923",
-      "comments": "dsflkjdsflksdfj",
-      "code": "324",
-      "id": 1008
-    },
-    {
       "orderNumber": 9,
       "orderDate": "03.09.2020",
       "orderTime": "21:21",
@@ -98,50 +76,6 @@
       "comments": "fsdgsfdgsfdg",
       "code": "435",
       "id": 1009
-    },
-    {
-      "orderNumber": 10,
-      "orderDate": "03.09.2020",
-      "orderTime": "21:23",
-      "carierCompany": "asfd",
-      "carierName": "safd",
-      "phone": "31245",
-      "comments": "asdfdagfs",
-      "code": "324",
-      "id": 1010
-    },
-    {
-      "orderNumber": 11,
-      "orderDate": "03.09.2020",
-      "orderTime": "21:23",
-      "carierCompany": "dsf",
-      "carierName": "dsf",
-      "phone": "435",
-      "comments": "dsfdsf",
-      "code": "3245",
-      "id": 1011
-    },
-    {
-      "orderNumber": 12,
-      "orderDate": "03.09.2020",
-      "orderTime": "21:24",
-      "carierCompany": "adfewda",
-      "carierName": "asdfd",
-      "phone": "324",
-      "comments": "adsfdasf",
-      "code": "324",
-      "id": 1012
-    },
-    {
-      "orderNumber": 13,
-      "orderDate": "03.09.2020",
-      "orderTime": "21:24",
-      "carierCompany": "asdf",
-      "carierName": "dsafa",
-      "phone": "324",
-      "comments": "sdafsdgfdasgfd",
-      "code": "1234",
-      "id": 1013
     }
   ]
 }
