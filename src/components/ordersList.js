@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import Order from "./order";
 
 class OrdersList extends Component {
-    constructor(props) {
-        super(props)
-    }
     state = {
         ordersListState: []
     }

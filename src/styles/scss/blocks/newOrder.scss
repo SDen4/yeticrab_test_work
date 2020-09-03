@@ -38,8 +38,16 @@
     margin-left: 20px;
 }
 
+.newOrder__label_auto-info {
+    flex-direction: row;
+}
+
 .newOrder__subtitle {
     margin-bottom: 10px;
+}
+
+.newOrder__subtitle_auto-info {
+    margin-right: 20px;
 }
 
 .newOrder__buttons {

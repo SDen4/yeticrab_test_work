@@ -14,10 +14,6 @@
         background-color: $orderBGHoverColor;
         color: $orderTextHoverColor;
     }
-
-    &:last-child {
-        margin-bottom: 0;
-    }
 }
 
 .order__wrapper {
