@@ -10,7 +10,6 @@
     cursor: pointer;
     background-color: $orderBGColor;
     transition: $transitionDuration;
-
     &:hover {
         background-color: $orderBGHoverColor;
         color: $orderTextHoverColor;
@@ -21,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 95%;
+    width: 90%;
     height: 95%;
 }
 
@@ -126,5 +125,49 @@
     position: absolute;
     top: 5px;
     right: 5px;
+    z-index: 50;
 
+}
+
+.order__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background-color: $orderBGColor;
+    cursor: auto;
+}
+
+.order__card_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    height: 95%;
+}
+
+.order__card_unactive {
+    display: none;
+}
+
+.order__card_item {
+    display: flex;
+    width: 100%;
+    margin: 0 0 20px 20px;
+}
+
+.order__card_subtitle {
+    width: 150px;
+}
+
+.order__card_info {
+    width: 500px;
 }

@@ -7,13 +7,18 @@
 .ordersList__head {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     height: 50px;
     background-color: $orderListHeadBGColor;
     margin-bottom: 10px;
     font-weight: bold;
     border-radius: 5px;
+}
+
+.orderList__wrapper_head {
+    margin-left: 20px;
+    width: 94%;
 }
 
 .ordersList__code {

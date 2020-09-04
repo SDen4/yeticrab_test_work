@@ -13,7 +13,7 @@ class OrdersList extends Component {
         return (
             <div className="ordersList">
                 <div className="ordersList__head">
-                    <div className="order__wrapper">
+                    <div className="order__wrapper orderList__wrapper_head">
                         <div className="order__number">Num</div>
                         <div className="order__date">Date</div>
                         <div className="order__company">Company</div>
