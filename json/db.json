@@ -89,17 +89,6 @@
       "id": 1010
     },
     {
-      "orderNumber": 11,
-      "orderDate": "03.09.2020",
-      "orderTime": "23:26",
-      "carierCompany": "sdf",
-      "carierName": "dasf",
-      "phone": "234",
-      "comments": "sdf",
-      "code": "324",
-      "id": 1011
-    },
-    {
       "orderNumber": 12,
       "orderDate": "03.09.2020",
       "orderTime": "23:26",

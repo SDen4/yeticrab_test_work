@@ -119,7 +119,6 @@ class Order extends Component {
             delete: false,
             deleteId: null
         });
-        this.props.handleRefresh();
     }
 }
 
