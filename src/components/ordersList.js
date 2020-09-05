@@ -6,14 +6,25 @@ class OrdersList extends Component {
         ordersListState: [],
         sortDirection: "desc"
     }
-    componentDidUpdate(refresh) {
-        this.getOrdersList();
-    }
+    // componentDidUpdate() {
+    //     if (!this.props.createRefresh) {
+    //         this.getOrdersList();
+    //     };
+    //     console.log(this.props.createRefresh);
+    // }
     componentDidMount() {
         this.getOrdersList();
     }
+        shouldComponentUpdate(props) {
+            if (props) {
+                return true
+            } else {
+                return false
+            }
+        }
     render() {
         const ordersList = this.state.ordersListState;
+        const { createRefresh } = this.props;
         return (
             <div className="ordersList">
                 <div className="ordersList__head">

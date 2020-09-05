@@ -174,6 +174,7 @@ class NewOrder extends Component {
             .then( () => {
                 this.handleReset();
                 this.clearForm();
+                this.props.createRefresh();
             })
             .catch(error => {
                 console.log(error);

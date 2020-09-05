@@ -17,8 +17,9 @@ class App extends Component {
                     </div>
                 </div>
                 <NewOrder 
-                    handleClickNewOrder={this.state.newOrder}
+                    handleClickNewOrder={this.state.newOrder} 
                     handleClear={this.handleClickNewOrder}
+                    createRefresh={() => this.createRefresh()}
                 />
                 <div className="app__panel">
                     <div className="app__panel_wrapper">
@@ -30,6 +31,11 @@ class App extends Component {
                 </div>
             </div>
         );
+    }
+    createRefresh() {
+        this.setState({
+            refresh: true
+        })
     }
     handleClickNewOrder = () => {
         this.setState({
