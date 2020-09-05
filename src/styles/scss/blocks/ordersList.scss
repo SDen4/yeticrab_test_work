@@ -22,7 +22,7 @@
     width: 100%;
 }
 
-.orderList__iten {
+.orderList__item {
     transition: $transitionDuration;
     &:hover {
         color: $orderBGHoverColor;

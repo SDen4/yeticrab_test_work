@@ -1,23 +1,37 @@
 .button {
-    padding: 10px 15px;
+    padding: 5px 15px;
     border-radius: 3px;
     font-size: 16px;
+    outline: none;
 }
 
 .button__submit {
-    background-color: $buttonAddOrder;
+    background-color: $buttonSubmit;
     color: $buttonAddOrderNextColor;
     transition: $transitionDuration;
     &:hover {
-        background-color: $buttonAddOrderHover;
+        background-color: $buttonSubmitHover;
     }
 }
 
 .button__reset {
-    background-color: $buttonDeleteOrder;
+    background-color: $buttonReset;
     color: $buttonAddOrderNextColor;
     transition: $transitionDuration;
     &:hover {
-        background-color: $buttonDeleteOrderHover;
+        background-color: $buttonResetHover;
     }
+}
+
+.button__edit {
+    background-color: $buttonEdit;
+    color: $buttonAddOrderNextColor;
+    transition: $transitionDuration;
+    &:hover {
+        background-color: $buttonEditHover;
+    }
+}
+
+.button__unactive {
+    display: none;
 }

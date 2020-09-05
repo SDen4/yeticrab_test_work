@@ -63,7 +63,7 @@
     outline: none;
     &:hover {
         &:before, &:after {
-        background-color: $buttonDeleteOrderHover;
+            background-color: $buttonResetHover;
         }
     }
     &:before, &:after {
@@ -72,7 +72,7 @@
         width: inherit;
         height: 5px;
         border-radius: 2px;
-        background-color: $buttonDeleteOrder;
+        background-color: $buttonReset;
         transition: $transitionDuration;
         position: absolute;
         top: 13px;
@@ -160,8 +160,20 @@
 
 .order__card_item {
     display: flex;
-    width: 100%;
-    margin: 0 0 20px 20px;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    margin: 0 0 40px 20px;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $orderBorderColor;
+    }
 }
 
 .order__card_subtitle {
@@ -170,4 +182,16 @@
 
 .order__card_info {
     width: 500px;
+}
+
+.order__card_info_unactive {
+    display: none;
+}
+
+.order__card_buttons_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 20px;
 }

@@ -16,27 +16,27 @@ class OrdersList extends Component {
                 <div className="ordersList__head">
                     <div className="order__wrapper orderList__wrapper_head">
                         <div 
-                            className="orderList__iten orderList__number ordersList__head_arrows"
-                            onClick={(e) => this.sortCompany("orderNumber")}
+                            className="orderList__item orderList__number ordersList__head_arrows"
+                            onClick={(e) => this.sortCompany("orderNumber", "orderList__number")}
                         >Num</div>
                         <div 
-                            className="orderList__iten orderList__date ordersList__head_arrows"
+                            className="orderList__item orderList__date ordersList__head_arrows"
                             onClick={(e) => this.sortCompany("orderDate")}
                         >Date</div>
                         <div 
-                            className="orderList__iten orderList__company ordersList__head_arrows" 
+                            className="orderList__item orderList__company ordersList__head_arrows" 
                             onClick={(e) => this.sortCompany("carierCompany")}
                         >Company</div>
                         <div 
-                            className="orderList__iten orderList__name ordersList__head_arrows"
+                            className="orderList__item orderList__name ordersList__head_arrows"
                             onClick={(e) => this.sortCompany("carierName")}
                         >Name</div>
                         <div
-                            className="orderList__iten orderList__phone ordersList__head_arrows"
+                            className="orderList__item orderList__phone ordersList__head_arrows"
                             onClick={(e) => this.sortCompany("phone")}
                         >Phone</div>
                         <div
-                            className="orderList__iten orderList__code ordersList__head_arrows"
+                            className="orderList__item orderList__code ordersList__head_arrows"
                             onClick={(e) => this.sortCompany("code")}
                         >ATI Code</div>
                     </div>
@@ -46,11 +46,18 @@ class OrdersList extends Component {
                         <Order
                             key={item.id}
                             item={item}
+                            delTest={() => this.delTest(item.id)}
                         />
                     ))}
                 </ul>
             </div>
         )
+    }
+    delTest = (id) => {
+        const newArr = this.state.ordersListState.filter(order => order.id !== id)
+        this.setState({
+            ordersListState: newArr
+        })
     }
     getOrdersList = async () => {
         let response = await fetch(`http://localhost:3000/orders`);
@@ -71,6 +78,7 @@ class OrdersList extends Component {
         };
         let sort = await fetch(`http://localhost:3000/orders?_sort=${field},views&_order=` + this.state.sortDirection);
         let sortContent = await sort.json();
+
         this.setState({
             ordersListState: sortContent
         });
