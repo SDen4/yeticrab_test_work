@@ -43,10 +43,10 @@ $ npm run dev
 ```
 #### API json-server
 
-###### URL: 
+
+###### URL:
 
 >http://localhost:3000/
-
 
 ###### Получить список заявок:
 
@@ -54,8 +54,9 @@ $ npm run dev
 
 ###### Получить заявку:
 
->GET    /orders/**<id>**
->где **<id>** - id заявки
+>GET    /orders/**{id}**
+>
+>где **{id}** - id заявки
 
 ###### Создать новую заявку:
 
@@ -63,11 +64,14 @@ $ npm run dev
 
 ###### Сортировка список заявок:
 
->http://localhost:3000/orders?_sort=**<field>**,views&>_order=**<direction>**
->где **<field>** - поле, по которому осуществляется сортировка
->    **<direction>** - направление сортировки: "asc" или "desc".
+>http://localhost:3000/orders?_sort=**{field}**,views&>_order=**{direction}**
+>
+>где **{field}** - поле, по которому осуществляется сортировка
+>
+>    **{direction}** - направление сортировки: "asc" или "desc".
 
 ###### Изменение элемента список заявок:
 
->PATCH    /orders/**<id>**
->где **<id>** - id заявки
+>PATCH    /orders/**{id}**
+>
+>где **{id}** - id заявки
