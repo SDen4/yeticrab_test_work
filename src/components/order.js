@@ -20,7 +20,7 @@ class Order extends Component {
         }
     }
     componentDidMount() {
-        this.test()
+        this.tempOrder()
     }
     render() {
         const {item} = this.props;
@@ -178,7 +178,7 @@ class Order extends Component {
             </li>
         )
     }
-    test = () => {
+    tempOrder = () => {
         this.setState({
             editedOrder: {
                 ...this.state.editedOrder,
@@ -210,7 +210,7 @@ class Order extends Component {
                 this.setState({
                     editMode: false
                 });
-                // this.test();
+                // this.tempOrder();
             })
             .catch(error => {
                 console.log(error);
@@ -247,8 +247,8 @@ class Order extends Component {
     deleteOrder = () => {
         axios.delete(`http://localhost:3000/orders/` + this.state.deleteId);
 
-        this.props.delTest(this.state.deleteId);
-        
+        this.props.deleteRefreshList(this.state.deleteId);
+
         this.setState({
             delete: false,
             deleteId: null

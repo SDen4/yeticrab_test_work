@@ -6,6 +6,9 @@ class OrdersList extends Component {
         ordersListState: [],
         sortDirection: "desc"
     }
+    componentDidUpdate(refresh) {
+        this.getOrdersList();
+    }
     componentDidMount() {
         this.getOrdersList();
     }
@@ -46,14 +49,14 @@ class OrdersList extends Component {
                         <Order
                             key={item.id}
                             item={item}
-                            delTest={() => this.delTest(item.id)}
+                            deleteRefreshList={() => this.deleteRefreshList(item.id)}
                         />
                     ))}
                 </ul>
             </div>
         )
     }
-    delTest = (id) => {
+    deleteRefreshList = (id) => {
         const newArr = this.state.ordersListState.filter(order => order.id !== id)
         this.setState({
             ordersListState: newArr

@@ -4,7 +4,8 @@ import NewOrder from "./newOrder";
 
 class App extends Component {
     state = {
-        newOrder: false
+        newOrder: false,
+        refresh: false
     }
     render() {
         return (
@@ -16,7 +17,7 @@ class App extends Component {
                     </div>
                 </div>
                 <NewOrder 
-                    handleClickNewOrder={this.state.newOrder} 
+                    handleClickNewOrder={this.state.newOrder}
                     handleClear={this.handleClickNewOrder}
                 />
                 <div className="app__panel">
