@@ -64,7 +64,7 @@ $ npm run dev
 
 ###### Сортировка список заявок:
 
->http://localhost:3000/orders?_sort=**{field}**,views&>_order=**{direction}**
+>/orders?_sort=**{field}**,views&>_order=**{direction}**
 >
 >где **{field}** - поле, по которому осуществляется сортировка
 >

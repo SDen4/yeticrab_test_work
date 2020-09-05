@@ -13,7 +13,10 @@ class App extends Component {
                 <div className={`${this.state.newOrder && "app__left_unactive"} ${"app__left"}`}>
                     <h1 className="app__title">Logistics orders</h1>
                     <div className="app__main">
-                        <OrdersList />
+                        <OrdersList 
+                            createRefresh={this.state.refresh}
+                            createRefreshBack={this.createRefreshBack}
+                        />
                     </div>
                 </div>
                 <NewOrder 
@@ -32,7 +35,12 @@ class App extends Component {
             </div>
         );
     }
-    createRefresh() {
+    createRefreshBack = () => {
+        this.setState({
+            refresh: false
+        })
+    }
+    createRefresh = () => {
         this.setState({
             refresh: true
         })
