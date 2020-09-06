@@ -12,6 +12,13 @@ class Order extends Component {
     }
     render() {
         const {item} = this.props;
+        const editedForm = this.state.editMode && 
+            <EditedForm 
+                editedOrder={this.props.item}
+                editId={this.state.deleteId}
+                closeEditMode={this.closeEditMode}
+                refreshCardInfo={this.refreshCardInfo}
+            />
         return (
             <li className="order" >
                 <div className="order__wrapper" onClick={this.handleCardWatch}>
@@ -27,7 +34,7 @@ class Order extends Component {
                     target="_blanck"
                 >{item.code}</a>
                 <button 
-                        className="order__delete"
+                        className="button__cross_delete"
                         onClick={(e) => this.deleteOrderWindow(item.id)}
                 ></button>
                 <div className={`${this.state.delete ? "order__delete_confirm" : "order__delete_confirm_unactive"}`}>
@@ -40,7 +47,7 @@ class Order extends Component {
                             onClick={this.deleteOrder}
                         >Delete</button>
                         <button 
-                            className="order__delete order__delete_confirm_cancel"
+                            className="button__cross_delete button__cross_delete_cancel"
                             onClick={this.deleteOrderCancel}
                         ></button>
                     </div>
@@ -100,13 +107,7 @@ class Order extends Component {
                                 >Edit</button>
                             </div>
                         </div>
-                        <EditedForm 
-                            editedOrder={this.props.item}
-                            editMode={this.state.editMode}
-                            editId={this.state.deleteId}
-                            closeEditMode={this.closeEditMode}
-                            refreshCardInfo={this.refreshCardInfo}
-                        />
+                        {editedForm}
                         <button
                             className="button button__reset"
                             onClick={this.handleCardWatch}

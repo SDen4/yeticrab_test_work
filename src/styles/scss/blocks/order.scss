@@ -55,37 +55,6 @@
     }
 }
 
-.order__delete {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    outline: none;
-    &:hover {
-        &:before, &:after {
-            background-color: $buttonResetHover;
-        }
-    }
-    &:before, &:after {
-        content: "";
-        display: block;
-        width: inherit;
-        height: 5px;
-        border-radius: 2px;
-        background-color: $buttonReset;
-        transition: $transitionDuration;
-        position: absolute;
-        top: 13px;
-        left: 0px;
-    }
-    &:before {
-        transform: rotate(45deg);
-    }
-    &:after {
-        transform: rotate(-45deg);
-    }
-}
-
 .order__delete_confirm_unactive {
     display: none;
 }
@@ -119,14 +88,6 @@
 
 .order__delete_confirm_text {
     margin-bottom: 20px;
-}
-
-.order__delete_confirm_cancel {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    z-index: 50;
-
 }
 
 .order__card {
@@ -182,11 +143,8 @@
 
 .order__card_info {
     width: 500px;
+    padding: 1px 1px;
 }
-
-// .order__card_info_unactive {
-//     display: none;
-// }
 
 .order__card_buttons_wrapper {
     display: flex;

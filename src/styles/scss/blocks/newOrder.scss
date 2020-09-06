@@ -1,5 +1,5 @@
 .newOrder {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -12,10 +12,6 @@
     background-color: $orderBGColor;
     border-radius: 5px;
     border: 1px solid $orderBorderColor;
-}
-
-.newOrder_active {
-    display: flex;
 }
 
 .newOrder__wrapper {
@@ -50,6 +46,12 @@
     font-size: $baseFontSize;
     width: 500px;
     height: fit-content;
+    border: 0;
+    outline: 0;
+    font: {
+        family: $baseFontFamily;
+        size: $baseFontSize;
+    }
 }
 
 .newOrder__subtitle_auto-info {

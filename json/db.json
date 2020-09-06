@@ -7,7 +7,7 @@
       "carierCompany": "Logistic Company One",
       "carierName": "John Smooth",
       "phone": "+7 922 22 22 231",
-      "comments": "asap",
+      "comments": "asap!!!",
       "code": 12345,
       "id": 1001
     },
@@ -70,11 +70,11 @@
       "orderNumber": 7,
       "orderDate": "05.09.2020",
       "orderTime": "22:41",
-      "carierCompany": "",
-      "carierName": "",
-      "phone": "",
-      "comments": "",
-      "code": "",
+      "carierCompany": "9",
+      "carierName": "9",
+      "phone": "9",
+      "comments": "9",
+      "code": "9",
       "id": 1007
     },
     {
@@ -94,43 +94,10 @@
       "orderTime": "22:42",
       "carierCompany": "asdf",
       "carierName": "123",
-      "phone": "",
-      "comments": "",
-      "code": "",
-      "id": 1009
-    },
-    {
-      "orderNumber": 10,
-      "orderDate": "05.09.2020",
-      "orderTime": "22:42",
-      "carierCompany": "123",
-      "carierName": "123",
       "phone": "123",
       "comments": "123",
-      "code": "123",
-      "id": 1010
-    },
-    {
-      "orderNumber": 11,
-      "orderDate": "06.09.2020",
-      "orderTime": "12:16",
-      "carierCompany": "Company Log",
-      "carierName": "Loginov Lol",
-      "phone": "10101010",
-      "comments": "log comments loginov text",
-      "code": "1234",
-      "id": 1011
-    },
-    {
-      "orderNumber": 12,
-      "orderDate": "06.09.2020",
-      "orderTime": "12:54",
-      "carierCompany": "sdafdsgdfsasda",
-      "carierName": "adsf",
-      "phone": "213",
-      "comments": "sadrewlkjfsxdflksd",
-      "code": "2134",
-      "id": 1012
+      "code": "213",
+      "id": 1009
     }
   ]
 }

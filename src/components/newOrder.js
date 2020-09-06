@@ -17,10 +17,9 @@ class NewOrder extends Component {
         this.handleOrderNumber(); //generator new order number
     }
     render() {
-        const {handleClickNewOrder} = this.props;
         const {orderNumber, orderDate, orderTime, carierCompany, carierName, phone, code, comments} = this.state;
         return (
-            <div className={`${handleClickNewOrder && "newOrder_active"} ${"newOrder"}`}>
+            <div className="newOrder">
                 <div className="newOrder__wrapper">
                     <h2 className="newOrder__title">Create new order</h2>
                     <form 
@@ -105,7 +104,7 @@ class NewOrder extends Component {
                                 type="reset" 
                                 className="button button__reset"
                                 onClick={() => {this.handleReset()}}
-                            >Reset</button>
+                            >Cansel</button>
                         </div>
                     </form>
                </div>

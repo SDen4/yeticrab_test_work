@@ -35,3 +35,47 @@
 .button__unactive {
     display: none;
 }
+
+.button__cross_delete {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+    &:hover {
+        &:before, &:after {
+            background-color: $buttonResetHover;
+        }
+    }
+    &:before, &:after {
+        content: "";
+        display: block;
+        width: inherit;
+        height: 5px;
+        border-radius: 2px;
+        background-color: $buttonReset;
+        transition: $transitionDuration;
+        position: absolute;
+        top: 13px;
+        left: 0px;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+.button__cross_delete_cancel {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 50;
+}
+
+.button__reset_search {
+    position: absolute;
+    top: 46px;
+    right: 12px;
+}

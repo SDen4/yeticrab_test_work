@@ -17,15 +17,15 @@ class EditedForm extends Component {
         this.tempOrder()
     }
     render() {
-        const { editedOrder, editMode, editId } = this.props;
+        const { editedOrder,  editId } = this.props;
         return (
             <form
-                className={`${!editMode ? "order__card_edit_form_unactive" : "order__card_edit_form"}`}
+                className="editedForm__form"
                 encType="multipart/form-data"
                 method="POST"
                 onSubmit={this.editOrder}
             >
-                <label className="order__card_item newOrder__label newOrder__label_card_edit">
+                <label className="order__card_item newOrder__label editedForm_card_edit">
                     <div className="order__card_subtitle">Carier company:</div>
                     <input 
                         className="newOrder__input"
@@ -36,7 +36,7 @@ class EditedForm extends Component {
                         onChange={this.handleChangeNew}
                     ></input>
                 </label>
-                <label className="order__card_item newOrder__label newOrder__label_card_edit">
+                <label className="order__card_item newOrder__label editedForm_card_edit">
                     <div className="order__card_subtitle">Name:</div>
                     <input 
                         className="newOrder__input"
@@ -47,7 +47,7 @@ class EditedForm extends Component {
                         onChange={this.handleChangeNew}
                     ></input>
                 </label>
-                <label className="order__card_item newOrder__label newOrder__label_card_edit">
+                <label className="order__card_item newOrder__label editedForm_card_edit">
                     <div className="order__card_subtitle">Phone:</div>
                     <input 
                         className="newOrder__input"
@@ -58,7 +58,7 @@ class EditedForm extends Component {
                         onChange={this.handleChangeNew}
                     ></input>
                 </label>
-                <label className="order__card_item newOrder__label newOrder__label_card_edit">
+                <label className="order__card_item newOrder__label editedForm_card_edit">
                     <div className="order__card_subtitle">Comments:</div>
                     <textarea 
                         className="newOrder__input"
@@ -69,7 +69,7 @@ class EditedForm extends Component {
                         onChange={this.handleChangeNew}
                     ></textarea>
                 </label>
-                <label className="order__card_item newOrder__label newOrder__label_card_edit">
+                <label className="order__card_item newOrder__label editedForm_card_edit">
                     <div className="order__card_subtitle">ATI Code:</div>
                     <input 
                         className="newOrder__input"
