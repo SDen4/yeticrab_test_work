@@ -2,14 +2,17 @@
 ### Yeticrab
 ### test work for javascript developer
 
-###  Stack:
+### Stack:
 ```sh
 html
 scss
 react
 ```
 
-###  Run development mode
+### Watch on [github-pages](https://sden4.github.io/yeticrab_test_work/)
+
+
+### Run development mode
 
 #### Установить проект
 ```sh
