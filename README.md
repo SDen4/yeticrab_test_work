@@ -7,6 +7,7 @@
 html
 scss
 react
+json-server
 ```
 
 ### Watch on [github-pages](https://sden4.github.io/yeticrab_test_work/)
