@@ -10,15 +10,16 @@ class OrdersList extends Component {
         if (this.props.createRefresh) {
             this.getOrdersList();
             this.props.createRefreshBack();
+            console.log("!!!" + this.state.ordersListState.length);
+            this.props.totalOrders(this.state.ordersListState.length);
         };
-        console.log(this.props.createRefresh);
     }
     componentDidMount() {
         this.getOrdersList();
     }
     render() {
         const ordersList = this.state.ordersListState;
-        const { createRefresh } = this.props;
+        const { createRefresh, filterString } = this.props;
         return (
             <div className="ordersList">
                 <div className="ordersList__head">
@@ -50,22 +51,36 @@ class OrdersList extends Component {
                     </div>
                 </div>
                 <ul className="ordersList__list">
-                    {ordersList.map(item => (
-                        <Order
-                            key={item.id}
-                            item={item}
-                            deleteRefreshList={() => this.deleteRefreshList(item.id)}
-                        />
-                    ))}
+                    {ordersList.filter(order => {
+                                let companyNameLowerCase = order.carierCompany.toLowerCase();
+                                let searchStrLowerCase = this.props.filterString.toLowerCase();
+                                return companyNameLowerCase.includes(searchStrLowerCase);
+                        }).map(item => (
+                            <Order
+                                key={item.id}
+                                item={item}
+                                deleteRefreshList={() => this.deleteRefreshList(item.id)}
+                                refreshCloseModeWindow={this.refreshCloseModeWindow}
+                                refreshCardInfo={this.refreshCardInfo}
+                            />
+                        ))
+                    }
                 </ul>
             </div>
         )
     }
+    refreshCardInfo = () => {
+        this.getOrdersList();
+    }
+    refreshCloseModeWindow = () => {
+        this.props.refreshCloseModeWindow();
+    }
     deleteRefreshList = (id) => {
-        const newArr = this.state.ordersListState.filter(order => order.id !== id)
+        const newOrderList = this.state.ordersListState.filter(order => order.id !== id)
         this.setState({
-            ordersListState: newArr
-        })
+            ordersListState: newOrderList
+        });
+        this.props.totalOrders(this.state.ordersListState.length);
     }
     getOrdersList = async () => {
         let response = await fetch(`http://localhost:3000/orders`);
@@ -73,6 +88,8 @@ class OrdersList extends Component {
         this.setState({
             ordersListState: content
         });
+        console.log(this.state.ordersListState.length);
+        this.props.totalOrders(this.state.ordersListState.length);//??
     }
     sortCompany = async (field) => {
         if(this.state.sortDirection === "asc") {

@@ -163,6 +163,9 @@ class NewOrder extends Component {
         this.setState({
             [event.target.name]: event.target.value
         });
+
+        console.log(this.state);
+
         //recording current time & data
         this.handleDateAndTime();
         //recording new order number
