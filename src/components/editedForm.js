@@ -102,18 +102,14 @@ class EditedForm extends Component {
     }
     handleChangeNew = (event) => {
         this.setState({
-            [event.target.name]: event.target.value,
+            [event.target.name]: event.target.name === "code" ? event.target.value.slice(0, 5) : event.target.value,
             orderNumber: this.props.editedOrder.orderNumber,
             orderDate: this.props.editedOrder.orderDate,
             orderTime: this.props.editedOrder.orderTime
         });
-        console.log(this.state);
     }
     editOrder = (event) => {
         event.preventDefault();
-
-        console.log(this.props.editId);
-        console.log(this.state);
         axios.patch(`http://localhost:3000/orders/` + this.props.editId, this.state)
             .then(() => {
                 this.props.closeEditMode();

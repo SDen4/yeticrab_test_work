@@ -10,8 +10,6 @@ class OrdersList extends Component {
         if (this.props.createRefresh) {
             this.getOrdersList();
             this.props.createRefreshBack();
-            // console.log("!!!" + this.state.ordersListState.length);
-            // this.props.totalOrders(this.state.ordersListState.length);
         };
     }
     componentDidMount() {
@@ -54,16 +52,15 @@ class OrdersList extends Component {
                     {ordersList
                         // search in orders //
                         .filter(order => {
-                                let alltext = (order.orderNumber + 
+                                let alltextinOrder = (order.orderNumber + 
                                     " " + order.orderDate + 
                                     " " + order.orderTime + 
                                     " " + order.carierCompany + 
                                     " " + order.carierName + 
                                     " " + order.phone + 
                                     " " + order.comments).toLowerCase();
-                                console.log(alltext);
                                 let searchStrLowerCase = this.props.filterString.toLowerCase();
-                                return alltext.includes(searchStrLowerCase);
+                                return alltextinOrder.includes(searchStrLowerCase);
                         }).map(item => (
                             <Order
                                 key={item.id}
@@ -89,8 +86,6 @@ class OrdersList extends Component {
         this.setState({
             ordersListState: newOrderList
         });
-        console.log("1: " + this.state.ordersListState.length);
-
         this.props.totalOrders(this.state.ordersListState.length-1);
     }
     getOrdersList = async () => {
@@ -99,8 +94,7 @@ class OrdersList extends Component {
         this.setState({
             ordersListState: content
         });
-        console.log(this.state.ordersListState.length);
-        this.props.totalOrders(this.state.ordersListState.length);//??
+        this.props.totalOrders(this.state.ordersListState.length);
     }
     sortCompany = async (field) => {
         if(this.state.sortDirection === "asc") {

@@ -160,11 +160,9 @@ class NewOrder extends Component {
     }
     handleChange = (event) => {
         this.setState({
-            [event.target.name]: event.target.value
+            //max length of code: 5 figures
+            [event.target.name]: event.target.name === "code" ? event.target.value.slice(0, 5) : event.target.value
         });
-
-        console.log(this.state);
-
         //recording current time & data
         this.handleDateAndTime();
         //recording new order number

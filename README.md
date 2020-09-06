@@ -62,7 +62,7 @@ $ npm run dev
 
 >POST    /orders
 
-###### Сортировка список заявок:
+###### Сортировка списка заявок:
 
 >/orders?_sort=**{field}**,views&>_order=**{direction}**
 >

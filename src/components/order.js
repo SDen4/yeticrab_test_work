@@ -126,13 +126,10 @@ class Order extends Component {
         })
     }
     editOrderButton(i) {
-        console.log(i);
         this.setState({
             editMode: true,
             deleteId: i.id
         })
-        console.log(this.deleteId);
-        console.log(this.editMode);
     }
     handleCardWatch = () => {
         this.setState({

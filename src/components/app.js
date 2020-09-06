@@ -74,11 +74,9 @@ class App extends Component {
         });
     }
     totalOrders = (length) => {
-        console.log("2: " + this.state.totalOrders);
         this.setState({
             totalOrders: length
         })
-        console.log("3: " + this.state.totalOrders);
     }
     createRefreshBack = () => {
         this.setState({
