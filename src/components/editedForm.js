@@ -4,13 +4,13 @@ import axios from 'axios';
 class EditedForm extends Component {
     state = {
         orderNumber: null,
-        orderDate: "",
-        orderTime: "",
-        carierCompany: "",
-        carierName: "",
-        phone: "",
-        comments: "",
-        code: "",
+        orderDate: '',
+        orderTime: '',
+        carierCompany: '',
+        carierName: '',
+        phone: '',
+        comments: '',
+        code: '',
         id: null
     }
     componentDidMount() {
@@ -20,69 +20,69 @@ class EditedForm extends Component {
         const { editedOrder,  editId } = this.props;
         return (
             <form
-                className="editedForm__form"
-                encType="multipart/form-data"
-                method="POST"
+                className='editedForm__form'
+                encType='multipart/form-data'
+                method='POST'
                 onSubmit={this.editOrder}
             >
-                <label className="order__card_item newOrder__label editedForm_card_edit">
-                    <div className="order__card_subtitle">Carier company:</div>
+                <label className='order__card_item newOrder__label editedForm_card_edit'>
+                    <div className='order__card_subtitle'>Carier company:</div>
                     <input 
-                        className="newOrder__input"
-                        type="text"
-                        placeholder="Enter the Carier company"
-                        name="carierCompany"
+                        className='newOrder__input'
+                        type='text'
+                        placeholder='Enter the Carier company'
+                        name='carierCompany'
                         value={this.state.carierCompany}
                         onChange={this.handleChangeNew}
                     ></input>
                 </label>
-                <label className="order__card_item newOrder__label editedForm_card_edit">
-                    <div className="order__card_subtitle">Name:</div>
+                <label className='order__card_item newOrder__label editedForm_card_edit'>
+                    <div className='order__card_subtitle'>Name:</div>
                     <input 
-                        className="newOrder__input"
-                        type="text"
-                        placeholder="Enter the Name"
-                        name="carierName"
+                        className='newOrder__input'
+                        type='text'
+                        placeholder='Enter the Name'
+                        name='carierName'
                         value={this.state.carierName}
                         onChange={this.handleChangeNew}
                     ></input>
                 </label>
-                <label className="order__card_item newOrder__label editedForm_card_edit">
-                    <div className="order__card_subtitle">Phone:</div>
+                <label className='order__card_item newOrder__label editedForm_card_edit'>
+                    <div className='order__card_subtitle'>Phone:</div>
                     <input 
-                        className="newOrder__input"
-                        type="number"
-                        placeholder="Enter the Phone number"
-                        name="phone"
+                        className='newOrder__input'
+                        type='number'
+                        placeholder='Enter the Phone number'
+                        name='phone'
                         value={this.state.phone}
                         onChange={this.handleChangeNew}
                     ></input>
                 </label>
-                <label className="order__card_item newOrder__label editedForm_card_edit">
-                    <div className="order__card_subtitle">Comments:</div>
+                <label className='order__card_item newOrder__label editedForm_card_edit'>
+                    <div className='order__card_subtitle'>Comments:</div>
                     <textarea 
-                        className="newOrder__input"
-                        type="text"
-                        placeholder="Enter your comment"
-                        name="comments"
+                        className='newOrder__input'
+                        type='text'
+                        placeholder='Enter your comment'
+                        name='comments'
                         value={this.state.comments}
                         onChange={this.handleChangeNew}
                     ></textarea>
                 </label>
-                <label className="order__card_item newOrder__label editedForm_card_edit">
-                    <div className="order__card_subtitle">ATI Code:</div>
+                <label className='order__card_item newOrder__label editedForm_card_edit'>
+                    <div className='order__card_subtitle'>ATI Code:</div>
                     <input 
-                        className="newOrder__input"
-                        type="number"
-                        placeholder="Enter the ATI Code"
-                        name="code"
+                        className='newOrder__input'
+                        type='number'
+                        placeholder='Enter the ATI Code'
+                        name='code'
                         value={this.state.code}
                         onChange={this.handleChangeNew}
                     ></input>
                 </label>
                 <button
-                    className="button button__submit"
-                    type="submit"
+                    className='button button__submit'
+                    type='submit'
                 >Save</button>
             </form>
         )
@@ -101,12 +101,30 @@ class EditedForm extends Component {
         });
     }
     handleChangeNew = (event) => {
-        this.setState({
-            [event.target.name]: event.target.name === "code" ? event.target.value.slice(0, 5) : event.target.value,
-            orderNumber: this.props.editedOrder.orderNumber,
-            orderDate: this.props.editedOrder.orderDate,
-            orderTime: this.props.editedOrder.orderTime
-        });
+
+        if(event.target.name === 'code') {
+            this.setState({
+                //max length of code: 5 figures
+                [event.target.name]: event.target.value.slice(0, 5)
+            })
+        } else if (event.target.name === 'phone') {
+            this.setState({
+                //max length of code: 11 figures
+                [event.target.name]: event.target.value.slice(0, 11)
+            })
+        } else if (event.target.name === 'carierName' || event.target.name === 'carierCompany') {
+            this.setState({
+                //max length of code: 25 symbols
+                [event.target.name]: event.target.value.slice(0, 25)
+            })
+        } else (
+            this.setState({
+                [event.target.name]: event.target.value,
+                orderNumber: this.props.editedOrder.orderNumber,
+                orderDate: this.props.editedOrder.orderDate,
+                orderTime: this.props.editedOrder.orderTime
+            })
+        )
     }
     editOrder = (event) => {
         event.preventDefault();

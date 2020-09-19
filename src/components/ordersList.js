@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import Order from "./order";
+import Order from './order';
 
 class OrdersList extends Component {
     state = {
         ordersListState: [],
-        sortDirection: "desc"
+        sortDirection: 'desc'
     }
     componentDidUpdate() {
         if (this.props.createRefresh) {
@@ -19,46 +19,46 @@ class OrdersList extends Component {
         const ordersList = this.state.ordersListState;
         const { createRefresh, filterString } = this.props;
         return (
-            <div className="ordersList">
-                <div className="ordersList__head">
-                    <div className="order__wrapper orderList__wrapper_head">
+            <div className='ordersList'>
+                <div className='ordersList__head'>
+                    <div className='order__wrapper orderList__wrapper_head'>
                         <div 
-                            className="orderList__item orderList__number ordersList__head_arrows"
-                            onClick={(e) => this.sortCompany("orderNumber", "orderList__number")}
+                            className='orderList__item orderList__number ordersList__head_arrows'
+                            onClick={(e) => this.sortCompany('orderNumber', 'orderList__number')}
                         >Num</div>
                         <div 
-                            className="orderList__item orderList__date ordersList__head_arrows"
-                            onClick={(e) => this.sortCompany("orderDate")}
+                            className='orderList__item orderList__date ordersList__head_arrows'
+                            onClick={(e) => this.sortCompany('orderDate')}
                         >Date</div>
                         <div 
-                            className="orderList__item orderList__company ordersList__head_arrows" 
-                            onClick={(e) => this.sortCompany("carierCompany")}
+                            className='orderList__item orderList__company ordersList__head_arrows' 
+                            onClick={(e) => this.sortCompany('carierCompany')}
                         >Company</div>
                         <div 
-                            className="orderList__item orderList__name ordersList__head_arrows"
-                            onClick={(e) => this.sortCompany("carierName")}
+                            className='orderList__item orderList__name ordersList__head_arrows'
+                            onClick={(e) => this.sortCompany('carierName')}
                         >Name</div>
                         <div
-                            className="orderList__item orderList__phone ordersList__head_arrows"
-                            onClick={(e) => this.sortCompany("phone")}
+                            className='orderList__item orderList__phone ordersList__head_arrows'
+                            onClick={(e) => this.sortCompany('phone')}
                         >Phone</div>
                         <div
-                            className="orderList__item orderList__code ordersList__head_arrows"
-                            onClick={(e) => this.sortCompany("code")}
+                            className='orderList__item orderList__code ordersList__head_arrows'
+                            onClick={(e) => this.sortCompany('code')}
                         >ATI Code</div>
                     </div>
                 </div>
-                <ul className="ordersList__list">
+                <ul className='ordersList__list'>
                     {ordersList
                         // search in orders //
                         .filter(order => {
                                 let alltextinOrder = (order.orderNumber + 
-                                    " " + order.orderDate + 
-                                    " " + order.orderTime + 
-                                    " " + order.carierCompany + 
-                                    " " + order.carierName + 
-                                    " " + order.phone + 
-                                    " " + order.comments).toLowerCase();
+                                    ' ' + order.orderDate + 
+                                    ' ' + order.orderTime + 
+                                    ' ' + order.carierCompany + 
+                                    ' ' + order.carierName + 
+                                    ' ' + order.phone + 
+                                    ' ' + order.comments).toLowerCase();
                                 let searchStrLowerCase = this.props.filterString.toLowerCase();
                                 return alltextinOrder.includes(searchStrLowerCase);
                         }).map(item => (
@@ -97,13 +97,13 @@ class OrdersList extends Component {
         this.props.totalOrders(this.state.ordersListState.length);
     }
     sortCompany = async (field) => {
-        if(this.state.sortDirection === "asc") {
+        if(this.state.sortDirection === 'asc') {
             this.setState({
-                sortDirection: "desc"
+                sortDirection: 'desc'
             });
         } else {
             this.setState({
-                sortDirection: "asc"
+                sortDirection: 'asc'
             });
         };
         let sort = await fetch(`http://localhost:3000/orders?_sort=${field},views&_order=` + this.state.sortDirection);

@@ -4,13 +4,13 @@ import axios from 'axios';
 class NewOrder extends Component {
     state = {
         orderNumber: null,
-        orderDate: "",
-        orderTime: "",
-        carierCompany: "",
-        carierName: "",
-        phone: "",
-        comments: "",
-        code: ""
+        orderDate: '',
+        orderTime: '',
+        carierCompany: '',
+        carierName: '',
+        phone: '',
+        comments: '',
+        code: ''
     }
     componentDidMount() {
         this.handleDateAndTime(); //generator current date & time for new order
@@ -19,90 +19,90 @@ class NewOrder extends Component {
     render() {
         const {orderNumber, orderDate, orderTime, carierCompany, carierName, phone, code, comments} = this.state;
         return (
-            <div className="newOrder">
-                <div className="newOrder__wrapper">
-                    <h2 className="newOrder__title">Create new order</h2>
+            <div className='newOrder'>
+                <div className='newOrder__wrapper'>
+                    <h2 className='newOrder__title'>Create new order</h2>
                     <form 
-                        className="newOrder__form"  
-                        encType="multipart/form-data" 
-                        method="POST"
+                        className='newOrder__form'  
+                        encType='multipart/form-data' 
+                        method='POST'
                         onSubmit={this.handleCreateOrder}
                     >
-                        <div className="newOrder__label newOrder__label_auto-info">
-                            <div className="newOrder__subtitle_auto-info">Order number:</div>
+                        <div className='newOrder__label newOrder__label_auto-info'>
+                            <div className='newOrder__subtitle_auto-info'>Order number:</div>
                             <div>{this.state.orderNumber}</div>
                         </div>
-                        <div className="newOrder__label newOrder__label_auto-info">
-                            <div className="newOrder__subtitle_auto-info">Order date:</div>
+                        <div className='newOrder__label newOrder__label_auto-info'>
+                            <div className='newOrder__subtitle_auto-info'>Order date:</div>
                             <div>{this.state.orderDate}</div>
                         </div>
-                        <div className="newOrder__label newOrder__label_auto-info">
-                            <div className="newOrder__subtitle_auto-info">Order time:</div>
+                        <div className='newOrder__label newOrder__label_auto-info'>
+                            <div className='newOrder__subtitle_auto-info'>Order time:</div>
                             <div>{this.state.orderTime}</div>
                         </div>
-                        <label className="newOrder__label">
-                            <div className="newOrder__subtitle">Carier company</div>
-                            <input 
-                                className="newOrder__input"
-                                type="text"
-                                placeholder="Enter the Carier company"
-                                name="carierCompany"
+                        <label className='newOrder__label'>
+                            <div className='newOrder__subtitle'>Carier company</div>
+                            <input
+                                className='newOrder__input'
+                                type='text'
+                                placeholder='Enter the Carier company'
+                                name='carierCompany'
                                 value={carierCompany}
-                                onChange={this.handleChange} 
+                                onChange={this.handleChange}
                             ></input>
                         </label>
-                        <label className="newOrder__label">
-                            <div className="newOrder__subtitle">Name</div>
-                            <input 
-                                className="newOrder__input"
-                                type="text"
-                                placeholder="Enter the Name"
-                                name="carierName"
+                        <label className='newOrder__label'>
+                            <div className='newOrder__subtitle'>Name</div>
+                            <input
+                                className='newOrder__input'
+                                type='text'
+                                placeholder='Enter the Name'
+                                name='carierName'
                                 value={carierName}
-                                onChange={this.handleChange} 
+                                onChange={this.handleChange}
                             ></input>
                         </label>
-                        <label className="newOrder__label">
-                            <div className="newOrder__subtitle">Phone</div>
-                            <input 
-                                className="newOrder__input"
-                                type="number"
-                                placeholder="Enter the Phone number"
-                                name="phone"
+                        <label className='newOrder__label'>
+                            <div className='newOrder__subtitle'>Phone</div>
+                            <input
+                                className='newOrder__input'
+                                type='number'
+                                placeholder='Enter the Phone number'
+                                name='phone'
                                 value={phone}
-                                onChange={this.handleChange} 
+                                onChange={this.handleChange}
                             ></input>
                         </label>
-                        <label className="newOrder__label">
-                            <div className="newOrder__subtitle">ATI Code</div>
-                            <input 
-                                className="newOrder__input"
-                                type="number"
-                                placeholder="Enter the ATI Code"
-                                name="code"
+                        <label className='newOrder__label'>
+                            <div className='newOrder__subtitle'>ATI Code</div>
+                            <input
+                                className='newOrder__input'
+                                type='number'
+                                placeholder='Enter the ATI Code'
+                                name='code'
                                 value={code}
-                                onChange={this.handleChange} 
+                                onChange={this.handleChange}
                             ></input>
                         </label>
-                        <label className="newOrder__label">
-                            <div className="newOrder__subtitle">Comment</div>
+                        <label className='newOrder__label'>
+                            <div className='newOrder__subtitle'>Comment</div>
                             <textarea 
-                                className="newOrder__input"
-                                placeholder="Enter your comment"
-                                name="comments"
+                                className='newOrder__input'
+                                placeholder='Enter your comment'
+                                name='comments'
                                 value={comments}
-                                onChange={this.handleChange} 
+                                onChange={this.handleChange}
                             ></textarea>
                         </label>
-                        <div className="newOrder__buttons">
-                            <button 
-                                type="submit" 
-                                className="button button__submit"
+                        <div className='newOrder__buttons'>
+                            <button
+                                type='submit' 
+                                className='button button__submit'
                                 onClick={this.handleCreateOrder}
                             >Save</button>
-                            <button 
-                                type="reset" 
-                                className="button button__reset"
+                            <button
+                                type='reset'
+                                className='button button__reset'
                                 onClick={() => {this.handleReset()}}
                             >Cansel</button>
                         </div>
@@ -149,20 +149,38 @@ class NewOrder extends Component {
     clearForm() {
         this.setState({
             orderNumber: null,
-            orderDate: "",
-            orderTime: "",
-            carierCompany: "",
-            carierName: "",
-            phone: "",
-            comments: "",
-            code: ""
+            orderDate: '',
+            orderTime: '',
+            carierCompany: '',
+            carierName: '',
+            phone: '',
+            comments: '',
+            code: ''
         })
     }
     handleChange = (event) => {
-        this.setState({
-            //max length of code: 5 figures
-            [event.target.name]: event.target.name === "code" ? event.target.value.slice(0, 5) : event.target.value
-        });
+
+            if(event.target.name === 'code') {
+                this.setState({
+                    //max length of code: 5 figures
+                    [event.target.name]: event.target.value.slice(0, 5)
+                })
+            } else if (event.target.name === 'phone') {
+                this.setState({
+                    //max length of code: 11 figures
+                    [event.target.name]: event.target.value.slice(0, 11)
+                })
+            } else if (event.target.name === 'carierName' || event.target.name === 'carierCompany') {
+                this.setState({
+                    //max length of code: 25 symbols
+                    [event.target.name]: event.target.value.slice(0, 25)
+                })
+            } else (
+                this.setState({
+                    [event.target.name]: event.target.value
+                })
+            )
+
         //recording current time & data
         this.handleDateAndTime();
         //recording new order number
