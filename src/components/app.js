@@ -30,7 +30,7 @@ class App extends Component {
                     </div>
                 </div>
                 {newOrder}
-                <div className={`${this.state.newOrder ? 'app__panel_unactive' : 'app__panel'}`}>
+                <aside className={`${this.state.newOrder ? 'app__panel_unactive' : 'app__panel'}`}>
                     <div className='app__panel_wrapper'>
                         <div className='app__panel_total_orders'>
                             Total orders: {this.state.totalOrders}
@@ -59,7 +59,7 @@ class App extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </aside>
             </div>
         );
     }
